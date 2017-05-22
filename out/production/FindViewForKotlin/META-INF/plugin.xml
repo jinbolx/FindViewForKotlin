@@ -1,0 +1,41 @@
+<idea-plugin>
+    <id>com.jinbolx.findviewforkotlin</id>
+    <name>FindViewForKotlin</name>
+    <version>1.0</version>
+    <vendor email="jinmin3401@gmail.com" url="http://www.github.com/jinbolx">jinbolx</vendor>
+
+    <description><![CDATA[
+     这是个人编写的FindViewByMe插件的Kotlin版本，基本代码来自该插件作者.<br>
+      now you kan generate "findViewById" for Kotlin code .<br>
+    ]]></description>
+
+    <change-notes><![CDATA[
+
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="145.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+
+    <actions>
+        <action id="FindViewKT" class="com.jin.action.FindViewAction" text="FindViewKt">
+            <add-to-group group-id="GenerateGroup"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl K"/>
+        </action>
+        <action id="FindView_xml" class="com.jin.action.FindViewXmlAction" text="FindViewXmlKt">
+            <add-to-group group-id="XmlGenerateToolsGroup" anchor="before" relative-to-action="GenerateDTD"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl K"/>
+        </action>
+    </actions>
+</idea-plugin>
